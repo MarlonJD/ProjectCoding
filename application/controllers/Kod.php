@@ -26,9 +26,9 @@ class Kod extends CI_Controller {
 				$data['onay'] = $this->kod_model->onay_fonksiyonu();
 				$data['eskiKod'] = $this->input->post('KodAlani');
 				}
-			$this->load->view('header');
+			$this->load->view('header-ders');
 			$this->load->view('kod_ders_view',$data);
-			$this->load->view('footer');
+			$this->load->view('footer-ders');
 		} else {
 			redirect('/user/login');
 		}
