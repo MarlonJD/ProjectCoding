@@ -1,0 +1,2 @@
+[02-May-2017 10:13:34 UTC] PHP Warning:  require_once(/home/erayozr/public_html/domains/kodveotesi.com/system/core/CodeIgniter.php): failed to open stream: No such file or directory in /home/erayozr/public_html/domains/kodveotesi.com/index.php on line 315
+[02-May-2017 10:13:34 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/erayozr/public_html/domains/kodveotesi.com/system/core/CodeIgniter.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/erayozr/public_html/domains/kodveotesi.com/index.php on line 315
