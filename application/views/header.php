@@ -142,8 +142,8 @@ nav .nav-header .header-text {
                 </ul>
 
         <div class="nav-header center">
-          <h1><?php echo $this->lang->line("main_header_text"); ?></h1>
-          <div class="header-text">My life</div>
+          <h1>Öğren ve Pratik Yap</h1>
+          <div class="header-text">Hızlı, basit, kullanışlı öğretici platform</div>
         </div>
       </div>
       
