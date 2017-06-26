@@ -87,7 +87,7 @@ nav .nav-background .resim {
 }
 nav .nav-header {
     clear: both;
-    padding: 40px 0
+    padding: 10px 0
 }
 nav .nav-header h1 {
     font-size: 56px;
@@ -117,33 +117,23 @@ nav .nav-header .header-text {
                             </a>
                         </li>
                      <?php } else { ?>
-                    <li><a href="<?php echo base_url("user/login"); ?>"><?php echo $this->lang->line("header_login"); ?></a></li>
-                    <li><a href="<?php echo base_url("user/register"); ?>"><?php echo $this->lang->line("header_register"); ?></a></li>
+                    <li><a href="<?php echo base_url("user/login"); ?>">Giriş Yap</a></li>
+                    <li><a href="<?php echo base_url("user/register"); ?>">Kayıt Ol</a></li>
                      <?php } ?>
-                    <li><a class="dropdown-button" href="#" data-activates="dropdown2">
-                                <?php echo $this->lang->line("header_language"); ?><i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                    </li>
         </ul>
         <!-- Dropdown Structure -->
             <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
                 <!-- Dropdown Structure -->
                 <ul id="dropdown1" class="dropdown-content">
-                    <li><a href="<?php echo base_url(); ?>road/createTrip"><?php echo $this->lang->line("header_createroadtrip"); ?></a></li>
-                    <li><a href="<?php echo base_url(); ?>road/RoadTrips"><?php echo $this->lang->line("header_manageurtrip"); ?></a></li>
-                    <li><a href="<?php echo base_url("user/logout"); ?>"><?php echo $this->lang->line("header_logout"); ?></a></li>
+                    <li><a href="<?php echo base_url(); ?>kod/ders">Dersler</a></li>
+                    <li><a href="<?php echo base_url("user/logout"); ?>">Çıkış Yap</a></li>
                 </ul>
             <?php }?>
-                <ul id="dropdown2" class="dropdown-content">
-                    <li><a href='<?php echo base_url(); ?>LangSwitch/switchLanguage/english'>English</a></li>
-                    <li><a href='<?php echo base_url(); ?>LangSwitch/switchLanguage/mongolian'>Монгол</a></li>
-                    <li><a href='<?php echo base_url(); ?>LangSwitch/switchLanguage/russian'>русский</a></li>
-                    <li><a href='<?php echo base_url(); ?>LangSwitch/switchLanguage/turkish'>Türkçe</a></li>
-                </ul>
 
         <div class="nav-header center">
-          <h1>Öğren ve Pratik Yap</h1>
-          <div class="header-text">Hızlı, basit, kullanışlı öğretici platform</div>
+          <h1>HTML/CSS Dersleri</h1>
+          <div class="header-text">Temelden HTML, CSS, Javascript dersleri ve yakında niceleri </div>
+          <div class="header-text"><a class="waves-effect light-blue btn" href="<?php echo base_url("user/register"); ?>">Kayıt Ol</a> <a class="waves-effect light-blue btn" href="<?php echo base_url("kod/dersler"); ?>">Derslere Başla</a></div>
         </div>
       </div>
       

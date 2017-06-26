@@ -24,7 +24,7 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="fa fa-crosshairs" aria-hidden="true"></i></h2>
-            <h5 class="center">Tecrübeleyin</h5> 
+            <h5 class="center">Uygulayın</h5> 
 
             <p class="light">Öğrendiklerinizi hemen ardından uygulayarak daha kalıcı hale getirin. Öğrenin, uygulayın ve sonraki derse geçin. Herhangi bir dersten başlayabilir , dersleri atlayabilirsiniz. Bir derste takılırsanız kısa bir süre ara verip tekrar denemenizi tavsiye ederiz.</p>
           </div>
