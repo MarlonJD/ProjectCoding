@@ -46,4 +46,14 @@ function basariliMi($id, $onay=NULL)
     return $basari;
 }
 
+
+function getDersler($konuid) //dersler sayfasındaki konuidye göre ders çekme fonksiyonu
+{
+    $CI =& get_instance();
+    $query = $CI->db->get_where('dersler', array('konu'=>$konuid));
+    foreach ($query->result() as $row) {
+      echo '<li><a href="ders/'.$row->permalink.'" class="ders-text">#'.$row->id.' '.$row->isim.'</a></li>';
+      }
+}
+
 ?>

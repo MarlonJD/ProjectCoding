@@ -12,13 +12,19 @@ class Kod_model extends CI_Model
          return $at->result();
      }
 
+     function GetKonular()
+     {
+         $at = $this->db->get('konular');
+         return $at->result();
+     }
+
     function sadece_birini_al($permalink)
      {
          $at = $this->db->get_where('dersler', array('permalink'=>$permalink));
          return $at->result();
      }
 
-    function veri_ekleme_fonksiyonu()
+    function ders_ekleme()
     {
         $data = array(
        'isim'=>$this->input->post('isim_input'),

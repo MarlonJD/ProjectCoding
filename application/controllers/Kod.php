@@ -35,8 +35,11 @@ class Kod extends CI_Controller {
 	}
 
 	function dersler() {
+		$this->load->model('kod_model');
+		$this->load->helper('pratik');
+		$data['konu'] = $this->kod_model->GetKonular();
 		$this->load->view('header-ders');
-		$this->load->view('kod_dersler_view');
+		$this->load->view('kod_dersler_view', $data);
 		$this->load->view('footer-ders');
 	}
 
@@ -60,6 +63,8 @@ class Kod extends CI_Controller {
             }
         $this->load->view('kod_ekle_view');
     }
+	
+	
 
 	function veriSil($id)
 	{
