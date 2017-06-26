@@ -8,7 +8,7 @@ class Kod_model extends CI_Model
      }
     function hepsini_al()
      {
-         $at = $this->db->get('kisiler');
+         $at = $this->db->get('users');
          return $at->result();
      }
 
@@ -24,7 +24,7 @@ class Kod_model extends CI_Model
        'isim'=>$this->input->post('isim_input'),
        'soyisim'=>$this->input->post('soyisim_input')
         );
-        $this->db->insert('kisiler',$data);
+        $this->db->insert('users',$data);
     }
 
     function veri_silme_fonksiyonu($id)

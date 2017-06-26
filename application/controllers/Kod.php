@@ -8,7 +8,9 @@ class Kod extends CI_Controller {
 		$this->load->helper('url'); //url helper'dan base_url fonksiyonunu çekmek için çağırıyoruz
         $this->load->model('kod_model');
         $data['veri'] = $this->kod_model->hepsini_al();
+		$this->load->view('header');
 		$this->load->view('kod_view', $data);
+		$this->load->view('footer');
 	}
 
     function ders($permalink=1) {
