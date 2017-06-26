@@ -34,6 +34,12 @@ class Kod extends CI_Controller {
 		}
 	}
 
+	function dersler() {
+		$this->load->view('header-ders');
+		$this->load->view('kod_dersler_view');
+		$this->load->view('footer-ders');
+	}
+
 	function basarili() {
 		$uyeid = $_SESSION['user_id'];
 		if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
