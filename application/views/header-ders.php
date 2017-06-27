@@ -14,6 +14,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/theme/solarized.min.css">
   <!--Font awesome-->
   <script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>
+  <style>
+        #tagButtons span {
+        display: inline-block; border-radius: 3px; background: #0a0; padding: 2px 2px 4px 7px; margin: 0 5px 0 0; font-size: 12px; font-weight: bold; color: #fff; cursor: pointer;
+        -webkit-transition: background-color .1s linear;
+        transition: background-color .1s linear;
+        }
+        #tagButtons span:hover {
+        background: #0c0;
+        }
+        #tagButtons span.selected {
+        text-decoration: underline
+        }
+  </style>
 </head>
 
     <body>

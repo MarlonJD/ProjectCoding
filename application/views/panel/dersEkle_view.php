@@ -1,60 +1,44 @@
-
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Ders Ekleme!</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-      </div>
-      <br><br>
-
-    </div>
-  </div>
-
-
   <div class="container">
     <div class="section">
 
       <!--   Icon Section   -->
       <div class="row">
-          <div class="col s12 m6 center">
-          Deneme
-          </div>
-          <div class="col s12 m6 center">
-          Deneme
-          </div>
-
-
-        <div class="col s12 m4">
+        <div class="col s12">
           <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+            <p class="light">
+              <h1>Ders Ekleme</h1>
+               <?php echo form_open('panel/dersEkle2');?>
+                <div class="input-field col s12">
+                    <label for="isim">Ders Adı</label>
+                    <input placeholder="#1 HTML'Ye Giriş" name="isim" id="isim" type="text" class="validate">
+                </div>
+                <div class="input-field col s12">
+                    <label for="permalink">Permalink</label>
+                    <input placeholder="html-ye-giris" name="permalink" id="permalink" type="text" class="validate">
+                </div>
+                <div class="input-field col s12">
+                    <select name="konu" id="konu">
+                            <?php foreach ($konu as $row) { ?>
+                            <option value="<?php echo $row->id;?>"><?php echo $row->konu;?></option>
+                            <?php } ?>
+                    </select>
+                    <label>Konular</label>
+                </div>
+                <div class="input-field col s12">
+                    <div id="tagButtons"></div>
+                    <textarea id="aciklama" name="aciklama" class="materialize-textarea" placeholder="Ders içeriği <xmp> kod alanı kullanımı"></textarea>
+                    <label for="aciklama">Açıklama</label>
+                </div>
+                <div class="input-field col s12">
+                    <label for="kodblok">Kod Blok</label>
+                    <textarea id="kodblok" name="kodblok" class="materialize-textarea" placeholder="eski dersten kalan kod"></textarea>
+                </div>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+              <?php echo form_submit('dersEkle','Yolla gitsin!');  ?>
+              <?php echo form_close(); ?>
+              </p>
           </div>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-      </div>
 
     </div>
     <br><br>

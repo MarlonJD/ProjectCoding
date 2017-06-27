@@ -20,7 +20,7 @@
         <div class="col s8">
             <div class="card blue">
                 <div class="card-content white-text">
-                    <span class="card-title"><b><?php echo $row->isim;?></b></span>
+                    <span class="card-title"><b>#<?php echo $row->id; ?> <?php echo $row->isim;?></b></span>
                     <div class="aciklama" id="style-7"> 
                         <?php echo $row->aciklama;?>
                     </div>

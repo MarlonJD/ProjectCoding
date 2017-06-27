@@ -11,6 +11,61 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/edit/closebrackets.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/addon/edit/closetag.min.js"></script>
   <script>
+  $(document).ready(function() {
+    $('select').material_select();
+
+  });
+
+  $(document).ready(function(){
+
+  var suggestedTags = [
+    '<p>',    
+    '</p>',
+    '<xmp>',    
+    '</xmp>'
+  ];
+
+  var selectedTags = [];
+
+  function tagButton(text){
+    return $('<span>').text(text)        
+  }
+
+  for(var i = 0; i < suggestedTags.length; i++) {
+    $('#tagButtons').append(tagButton(suggestedTags[i]));
+  }
+
+  $('#tagButtons span').click(function(){
+    var val = $(this).text();
+    var index = selectedTags.indexOf(val);
+    if(index > -1) {
+      removed = selectedTags.splice(index,1); 
+      $(this).removeClass('selected');
+    } else {
+      selectedTags.push(val);
+      $(this).addClass('selected');
+    }
+    $('#aciklama').val(selectedTags.join(''));
+    console.log(selectedTags);
+  });
+
+  $('#aciklama').keyup(function(){
+    selectedTags = [];
+    var textTags = $(this).val().split(',');
+    for(var i = 0; i < textTags.length; i++) {
+      var text = $.trim(textTags[i]);
+      if(text) {
+        selectedTags.push(text);
+      }
+    }
+    console.log(selectedTags);
+  });
+
+});
+
+
+  </script>
+  <script>
 
     var mixedMode = {
         name: "htmlmixed",
@@ -45,10 +100,10 @@
   $(function(){
 
     $('.button-collapse').sideNav();
+    
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
-
   </script>
   </body>
 </html>

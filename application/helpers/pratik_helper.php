@@ -56,4 +56,14 @@ function getDersler($konuid) //dersler sayfasındaki konuidye göre ders çekme 
       }
 }
 
+
+function getSonDers()
+{
+    $CI =& get_instance();
+    $query = $CI->db->order_by('id','desc')
+                    ->get_where('dersler');
+    $at = $query->row();
+    echo $at->id;
+}
+
 ?>

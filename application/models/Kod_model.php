@@ -24,13 +24,28 @@ class Kod_model extends CI_Model
          return $at->result();
      }
 
-    function ders_ekleme()
+    function ders_ekleme() //paneldeki ders ekleme fonksiyonu
     {
         $data = array(
-       'isim'=>$this->input->post('isim_input'),
-       'soyisim'=>$this->input->post('soyisim_input')
+       'isim'=>$this->input->post('isim'),
+       'permalink'=>$this->input->post('permalink'),
+       'konu'=>$this->input->post('konu'),
+       'aciklama'=>$this->input->post('aciklama'),
+       'kodblok'=>$this->input->post('kodblok')
         );
-        $this->db->insert('users',$data);
+        $this->db->insert('dersler',$data);
+    }
+
+    function cozum_ekleme() //paneldeki çözüm ekleme fonksiyonu
+    {
+        $nkabulkod = $this->input->post('kabulkod');
+        $kabulkod = preg_replace('/\s+/', '', $nkabulkod);
+        $data = array(
+       'dersid'=>$this->input->post('dersid'),
+       'aciklama'=>$this->input->post('aciklama'),
+       'kabulkod'=>$kabulkod
+        );
+        $this->db->insert('pratik',$data);
     }
 
     function veri_silme_fonksiyonu($id)
