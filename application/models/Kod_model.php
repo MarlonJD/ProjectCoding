@@ -83,5 +83,12 @@ class Kod_model extends CI_Model
         redirect('/kod/ders/'.$sonrakidersadi);
     }
 
+    function yolHaritasiGetir()
+    {
+        $CI =& get_instance();
+        $query = $CI->db->get_where('dersler');
+        return $query->result();
+    }
+
 }
 ?>

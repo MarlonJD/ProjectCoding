@@ -23,13 +23,14 @@ function numaraIleGorevGetir($id, $onay=NULL)
     return $basari;
 }
 
-function yolHaritasiGetir()
+function dersYapildiMi($dersid, $uyeid)
 {
     $CI =& get_instance();
-    $query = $CI->db->get_where('dersler');
-    foreach ($query->result() as $row) {
-      echo '<li><a href="#!" class="aktif-degil">#'.$row->id.' '.$row->isim.'</a></li>';
-      }
+    $query = $CI->db->get_where('kontrol', array('dersid'=>$dersid, 'uyeid'=>$uyeid));
+    $at = $query->row();
+    $ok = 0;
+    if (isset($at->id)) { $ok=1; }
+    return $ok;
 }
 
 function basariliMi($id, $onay=NULL)

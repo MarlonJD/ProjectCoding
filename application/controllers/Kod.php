@@ -21,6 +21,7 @@ class Kod extends CI_Controller {
 			$this->load->helper('form');
 			$this->load->helper('url');
 			$data['veri']=$this->kod_model->sadece_birini_al($permalink);
+			$data['yolharitasi']=$this->kod_model->yolHaritasiGetir();
 			if($this->input->post('deneme'))//formda sumbit tuşuna basıldığında çalışacak fonksiyon
 				{  
 				$data['onay'] = $this->kod_model->onay_fonksiyonu();

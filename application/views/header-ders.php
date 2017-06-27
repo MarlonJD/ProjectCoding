@@ -48,8 +48,12 @@
         </ul>
         <!-- Dropdown Structure -->
             <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) { ?>
+            <ul class="right">
+                <li><a href="#" data-activates="slide-out" class="button-collapse">Yol Haritası</a></li>
+            </ul>
                 <!-- Dropdown Structure -->
                 <ul id="dropdown1" class="dropdown-content">
+                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                     <li><a href="<?php echo base_url(); ?>kod/ders">Dersler</a></li>
                     <li><a href="<?php echo base_url("user/logout"); ?>">Çıkış Yap</a></li>
                 </ul>

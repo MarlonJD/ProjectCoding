@@ -114,6 +114,18 @@
     }
 
     .aktif-degil {
-    pointer-events: none;
+    /**pointer-events: none;**/
     color: #999 !important;
+    height: 36px !important;
+    line-height: 15px !important;
+    padding-top: 10px !important;
     }
+
+    .aktif {
+    /**pointer-events: none;**/
+    height: 36px !important;
+    line-height: 15px !important;
+    padding-top: 10px !important;
+    }
+
+    

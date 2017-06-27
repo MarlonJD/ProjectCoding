@@ -6,11 +6,18 @@
         <img src="http://materializecss.com/images/office.jpg">
       </div>
       <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      <a href="#!name"><span class="white-text name"><?php echo $_SESSION['username']; ?> </span></a>
+      <a href="#!email"><span class="white-text email"><?php echo $_SESSION['user_id']; ?></span></a>
     </div></li>
     <li><a class="subheader">Dersler</a></li>
-    <?php yolHaritasiGetir(); ?>
+    <?php foreach ($yolharitasi as $row) { ?>
+    <li>
+        <a href="<?php echo $row->permalink; ?>" class="<?php $dersBoo = dersYapildiMi($row->id,$_SESSION['user_id']);
+    if ($dersBoo) { echo "aktif-degil"; } else { echo "aktif"; } ?>">
+            #<?php echo $row->id,' ',$row->isim; ?>
+        </a>
+    </li>
+    <?php } ?> 
   </ul>
 
         
