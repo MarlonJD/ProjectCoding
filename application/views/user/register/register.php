@@ -17,31 +17,27 @@
 		<?php endif; ?>
 		<div class="col-md-12">
 			<div class="page-header">
-				<h1>Register</h1>
+				<h1>Kayıt Ol</h1>
 			</div>
 			<?= form_open() ?>
-				<div class="form-group">
-					<label for="username">Username</label>
-					<input type="text" class="form-control" id="username" name="username" placeholder="Enter a username">
-					<p class="help-block">At least 4 characters, letters or numbers only</p>
+				<div class="input-field">
+					<label for="username">Kullanıcı Adınız</label>
+					<input type="text" class="form-control" id="username" name="username" placeholder="En az 4 Karakter sadece harf veya sayı geçerli">
 				</div>
-				<div class="form-group">
+				<div class="input-field">
 					<label for="email">Email</label>
-					<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-					<p class="help-block">A valid email address</p>
+					<input type="email" class="form-control" id="email" name="email" placeholder="Geçerli bir e-mail adresi">
 				</div>
-				<div class="form-group">
-					<label for="password">Password</label>
-					<input type="password" class="form-control" id="password" name="password" placeholder="Enter a password">
-					<p class="help-block">At least 6 characters</p>
+				<div class="input-field">
+					<label for="password">Şifre</label>
+					<input type="password" class="form-control" id="password" name="password" placeholder="En az 6 karakter">
 				</div>
-				<div class="form-group">
-					<label for="password_confirm">Confirm password</label>
-					<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Confirm your password">
-					<p class="help-block">Must match your password</p>
+				<div class="input-field">
+					<label for="password_confirm">Şifre Onayı</label>
+					<input type="password" class="form-control" id="password_confirm" name="password_confirm" placeholder="Şifreler Eşleşmeli">
 				</div>
-				<div class="form-group">
-					<input type="submit" class="btn btn-default" value="Register">
+				<div class="input-field">
+					<input type="submit" class="btn btn-default" value="Kayıt Ol">
 				</div>
 			</form>
 		</div>

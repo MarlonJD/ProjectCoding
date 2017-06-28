@@ -134,7 +134,7 @@ class User extends CI_Controller {
 				
 				// user login ok
 		
-				redirect('/kod/ders');
+				redirect('/kod/');
 				
 			} else {
 				
