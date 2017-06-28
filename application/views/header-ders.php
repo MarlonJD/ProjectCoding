@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/theme/solarized.min.css">
   <!--Font awesome-->
   <script src="https://use.fontawesome.com/7dbe7bb3a7.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <style>
         #tagButtons span {
         display: inline-block; border-radius: 3px; background: #0a0; padding: 2px 2px 4px 7px; margin: 0 5px 0 0; font-size: 12px; font-weight: bold; color: #fff; cursor: pointer;
@@ -53,7 +54,6 @@
             </ul>
                 <!-- Dropdown Structure -->
                 <ul id="dropdown1" class="dropdown-content">
-                    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
                     <li><a href="<?php echo base_url(); ?>kod/ders">Dersler</a></li>
                     <li><a href="<?php echo base_url("user/logout"); ?>">Çıkış Yap</a></li>
                 </ul>

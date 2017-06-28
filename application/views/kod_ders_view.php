@@ -1,5 +1,4 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-
  <ul id="slide-out" class="side-nav">
     <li><div class="userView">
       <div class="background">
@@ -43,12 +42,12 @@
                         <ul>
                             <?php if (isset($onay)) { numaraIleGorevGetir($row->id, $onay, 0); 
                             $basari = basariliMi($row->id, $onay);
-                                if (!$basari==0) { 
-                                    echo "</br>Tebrikler";
+                                if (!$basari==0) {
+                                    echo "<script type='text/javascript'> $(window).load(function(){    $('.tap-target').tapTarget('open'); }); </script>";
                                 }
                             } else 
                             { numaraIleGorevGetir($row->id, NULL); } ?>
-
+                            
                         </ul>
                     </div>
                 </div>
@@ -87,5 +86,26 @@
             </div>
         </div>
 
+<?php if (isset($onay)) { 
+    $basari = basariliMi($row->id, $onay); 
+    if (!$basari==0) { ?>
+        <div class="fixed-action-btn" style="top: 45px; right: 24px;">
+            <a id="menu"><i class="fa fa-tasks fa-2x green-text"></i></a>
+        </div>
+    <!-- Tap Target Structure -->
+    <div class="tap-target cyan" data-activates="menu">
+        <div class="tap-target-content center white-text">
+            <h4><i class="fa fa-check fa-2x green-text" aria-hidden="true"></i> Tebrikler</h4>
+            <p>Tüm görevleri başarıyla tamamladınız. Sonraki derse geçebilirsiniz.</p>
+            <a href="<?php echo base_url('kod/basarili/'.$row->permalink); ?>" class="waves-effect waves-teal btn-flat right white-text">Sonraki Ders</a>
+        </div>
+    </div>
+<?php } } ?>
+                              
+
+
         <?php } ?>
       </div>
+
+
+    

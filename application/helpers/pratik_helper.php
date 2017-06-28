@@ -11,13 +11,13 @@ function numaraIleGorevGetir($id, $onay=NULL)
     foreach ($query->result() as $row) {
       if (isset($onay)) {
           if ($onay[$row->id]==1) { 
-              echo '<li><i class="material-icons">done</i>'.$row->aciklama.'</li>';
+              echo '<i class="fa fa-check fa-2x" aria-hidden="true"></i> '.$row->aciklama.'</li>';
           } elseif ($onay[$row->id]==0) { 
-              echo '<li><i class="material-icons">error_outline</i> '.$row->aciklama.'</li>';
+              echo '<li><i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> '.$row->aciklama.'</li>';
               $basari = 0;
           }
       } else {
-      echo '<li><i class="material-icons">error_outline</i> '.$row->aciklama.'</li>';
+      echo '<li><i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i> '.$row->aciklama.'</li>';
       }
     }
     return $basari;
@@ -66,5 +66,6 @@ function getSonDers()
     $at = $query->row();
     echo $at->id;
 }
+
 
 ?>
