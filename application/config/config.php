@@ -357,7 +357,7 @@ $config['encryption_key'] = 'HxFiFUnLZDfqs9YR6NkWRbJSt9CmjFQx';
 |	IMPORTANT: You are REQUIRED to set a valid save path!
 |
 | 'sess_match_ip'
-|
+|   
 |	Whether to match the user's IP address when reading the session data.
 |
 |	WARNING: If you're using the database driver, don't forget to update
@@ -379,7 +379,8 @@ $config['encryption_key'] = 'HxFiFUnLZDfqs9YR6NkWRbJSt9CmjFQx';
 */
 $config['sess_driver'] = 'database';
 $config['sess_cookie_name'] = 'ci_session';
-$config['sess_expiration'] = 7200;
+$config['sess_expiration'] = 72000000;
+$config['sess_expire_on_close'] = FALSE;
 $config['sess_save_path'] = 'ci_sessions';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
